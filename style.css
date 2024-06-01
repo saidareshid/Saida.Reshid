@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Untitled\ design\ \(6\).png);
+    background-size: cover;
+    background-position: center;
+}
+
+#header2{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo{
+    display:inline-block;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.logo span{
+    color: #ff004f;
+}
+
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 50px;
+    margin-top: 20px;
+
+}
+.header-text h1 span{
+    color: #ff004f
+}
+
+/* -------------about------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* This ensures vertical centering */
+    flex-wrap: wrap;
+}
+
+
+.about-col-1 {
+    flex-basis: 25%; /* Ensure this is set or adjust accordingly */
+    margin-top: -200px; /* Adjust this value as needed to move the image slightly up */
+}
+
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.color1{
+    color: #ff004f;
+}
+.color2{
+    color: #318CE7;
+}
+
+.color3{
+    color: #b54769;
+}
+
+.about-col-2{
+    flex-basis: 70%;
+}
+
+.sub-title{
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    padding: 10px 20px;
+    margin-right: 50px;
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/*----------education---- */
+
+#education{
+    padding: 30px 0;
+}
+.education-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.education-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.education-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;   
+}
+
+.education-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.education-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.education-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+.education-list ul li span{
+    color: #b54769;
+    font-size: 16px;
+}
+
+/* ------portfolio----*/
+
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.logo-container{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    
+    height: 400px;
+}
+
+.logo-container{
+    margin-bottom: 10px;
+    transition: transform 0.5s;
+}
+
+.logo-container i{
+    color:#ababab;
+
+}
+
+.layer{
+    width:100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40 px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.logo-container:hover i{
+    transform: scale(1.1);
+}
+
+.logo-container:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    background-color: transparent;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s, color 0.5s;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+}
+
+.btn:hover{
+    background: #ff004f;
+    color:#fff
+}
+
+.contact-left{
+    flex-basis: 100%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color:#ff004f;
+    transform: translateY(-5px);
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+
+
+/* Adjustments specific to the doctorate.html page */
+
+#doctorate .container h3 {
+    margin-bottom: 30px; /* Adds space between the h3 and h2 headings */
+}
+
+
+.doctoral-page{
+    padding: 30px 10%;
+}
+
+.doctoral-page h3 {
+    margin-bottom: 30px; /* Increases the bottom margin of h3 to create more space */
+    font-size: 18px; /* Adjust font size if needed */
+    color: #cccccc; /* Lighter color for text */
+    line-height: 1.6; /* Better line spacing for readability */
+}
+
+.doctoral-page h2 {
+    margin-top: 20px; /* Optionally add top margin to h2 if more space is needed */
+    font-size: 20px; /* Adjust font size if needed */
+    color: #fff; /* White color for headings */
+    margin-bottom: 15px; /* Space before the next content */
+}
+
+.courses ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    gap: 20px; /* Adds space between the grid items */
+    padding: 0; /* Removes default padding */
+    list-style: none; /* Removes default list style */
+    color: #ff004f; /* Blue color for list items */
+    font-weight: bold; /* Bold font style */
+}
+
+.courses li {
+    background: #1a1a1a; /* Dark background for each item */
+    padding: 15px; /* Padding inside each grid item */
+    border-radius: 10px; /* Rounded corners for grid items */
+}
+
+.courses h4 {
+    font-size: 16px; /* Adjust font size as needed */
+    color: #fff; /* White color for headings */
+    margin-bottom: 10px; /* Space between heading and paragraph */
+    
+}
+
+.courses span{
+    color: #b54769;
+}
+
+.courses p {
+    font-size: 12px; /* Smaller font size for descriptions */
+    color: #cccccc; /* Lighter color for text */
+    line-height: 1.4; /* Improved line spacing for readability */
+}
+
+.courses h5 {
+    font-size: 15px; /* Size of the sub-heading */
+    color: #ff004f; /* Bright color for sub-headings */
+}
+
+.courses ul li {
+    font-size: 12px; /* Size of list items under sub-headings */
+    color: #cccccc; /* Lighter color for readability */
+    line-height: 1.4; /* Line spacing for better readability */
+}
+
